@@ -99,6 +99,3 @@ docs/vendor/
 *.sublime-project
 *.sublime-workspace
 
-checkpoints/save_checkpoint/stage2/checkpoint_best.pth
-checkpoints/save_checkpoint/stage2/checkpoint_best.pth
-checkpoints/save_checkpoint/stage2/checkpoint_best.pth
