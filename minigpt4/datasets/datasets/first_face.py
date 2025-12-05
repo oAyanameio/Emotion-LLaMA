@@ -66,6 +66,7 @@ class FeatureFaceDataset(Dataset):
 
         self.task_pool = [
            "emotion",
+        #    "reason", 
         ]
 
         print("ann_path: ", ann_path)
@@ -81,15 +82,15 @@ class FeatureFaceDataset(Dataset):
         for ii, emo in enumerate(emos): self.emo2idx[emo] = ii
         for ii, emo in enumerate(emos): self.idx2emo[ii] = emo
 
-        json_file_path = "/home/user/selected_face/face_emotion/MERR_coarse_grained.json" 
+        json_file_path = "/home/lbh/Dataset/Emotion/mer2023/MERR_coarse_grained.json" 
         with open(json_file_path, 'r') as json_file:
             self.MERR_coarse_grained_dict = json.load(json_file)
 
-        reason_json_file_path = "/home/user/selected_face/face_emotion/MERR_fine_grained.json"
+        reason_json_file_path = "/home/lbh/Dataset/Emotion/mer2023/MERR_fine_grained.json"
         with open(reason_json_file_path, 'r') as json_file:
             self.MERR_fine_grained_dict = json.load(json_file)
 
-        self.character_lines = pd.read_csv('/home/user/selected_face/face_emotion/transcription_en_all.csv')
+        self.character_lines = pd.read_csv('/home/lbh/Dataset/Emotion/mer2023/transcription_en_all.csv')
 
 
     def __len__(self):
